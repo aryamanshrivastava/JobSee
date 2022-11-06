@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'find.dart';
+import 'otpverify.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -95,8 +95,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   //                   auth: _auth,
                   //                 )));
                   //   } else {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => FindPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OtpScreen(
+                                phoneNumber: phoneController.text,
+                              )));
                   //   }
                   // }
                 },
